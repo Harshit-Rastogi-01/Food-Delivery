@@ -5,7 +5,8 @@
   align-items: center ;
 }
 .navbar .logo{
-  width :150px ;
+  width :165px ;
+  height: 50px;
 }
 
 .navbar-menu{
@@ -61,7 +62,8 @@
 /* here we are adding responsiveness  */
 @media (max-width:1050px){
   .navbar .logo{
-    width:140px;
+    width:160px;
+    /* height: 20px; */
   }
   .navbar-menu{
     gap:20px;
@@ -80,7 +82,7 @@
 
 @media (max-width:900px){
   .navbar .logo{
-    width:120px;
+    width:130px;
   }
   .navbar-menu{
     gap:15px;

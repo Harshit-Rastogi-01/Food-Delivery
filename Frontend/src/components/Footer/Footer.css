@@ -17,6 +17,7 @@
 }
 .footer-content-left p{
   font-weight: 500;
+  max-width: 85%;
   
   /* font-family: verdana ; */
 }
@@ -48,6 +49,13 @@
   height: 2px;
   margin: 20px 0px;
   
+}
+.footer-logo{
+  margin-bottom: 10px;
+  margin-left: 0;
+  gap: 20px;
+  padding: 0;
+  cursor: pointer;
 }
 @media (max-width:750px) {
   .footer-content{
