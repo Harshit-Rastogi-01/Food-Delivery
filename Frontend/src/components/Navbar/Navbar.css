@@ -1,0 +1,106 @@
+.navbar{
+  padding:20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+}
+.navbar .logo{
+  width :150px ;
+}
+
+.navbar-menu{
+  display: flex;
+  list-style: none;
+  gap : 20px ;
+  color :rgb(93, 93, 93);
+  font-size: 20px;
+}
+
+.navbar-right{
+  display: flex;
+  align-items: center;
+  gap:40px;
+
+}
+
+.navbar button{
+  background: transparent;
+  font-size: 16px ;
+  color: rgb(93, 93, 93);
+  border : 1px solid tomato ;
+  padding: 10px 30px;
+  border-radius:50px;
+  cursor: pointer;
+
+}
+.navbar button:hover{
+  background-color: rgb(246, 240, 239);
+  transition : 0.3s
+}
+.navbar .active{
+  padding-bottom: 2px;
+  border-bottom: 2px solid gray;
+}
+.navbar li{
+  cursor: pointer;
+}
+
+.navbar-search-icon{
+  position: relative;
+}
+
+.navbar-search-icon .dot{
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 5px;
+  top:-12px;
+  right:-12px;
+  background-color: tomato;
+}
+/* here we are adding responsiveness  */
+@media (max-width:1050px){
+  .navbar .logo{
+    width:140px;
+  }
+  .navbar-menu{
+    gap:20px;
+    font-size: 17px;
+  }
+  .navbar-right{
+    gap:30px;
+  }
+  .navbar-right img{
+    width:22px;
+  }
+  .navbar-right button{
+    padding:8px 25px;
+  }
+}
+
+@media (max-width:900px){
+  .navbar .logo{
+    width:120px;
+  }
+  .navbar-menu{
+    gap:15px;
+    font-size: 16px;
+  }
+  .navbar-right{
+    gap:20px;
+  }
+  .navbar-right img{
+    width:20px;
+  }
+  .navbar-right button{
+    padding:7px 20px;
+    font-size: 15px;
+  }
+}
+
+/* here we only keep the logo and right part of navabar , so we didn't changed it , and we only removed navbar menu , therefore we have only navbar menu in maxwidth of 750px */
+@media (max-width:750px){
+  .navbar-menu{
+    display: none;
+  }
+}
