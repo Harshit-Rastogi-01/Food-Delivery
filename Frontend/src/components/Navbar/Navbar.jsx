@@ -1,15 +1,20 @@
-import React ,{useState}from 'react'
+import React ,{useState , useContext}from 'react'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import {assets} from '../../assets/assets'
+import { StoreContext } from '../../Context/StoreContext'
+
 const Navbar = ({setShowLogin}) => {
 
   const[menu,setMenu]=useState("home");
+  const{getTotalCartAmount} =useContext(StoreContext);
   return (
     <div className='navbar'>
-    <img src={assets.logo1} alt="" className="logo" />
+    <Link to="/"><img src={assets.logo1} alt="" className="logo" />
+    </Link>
     <ul className="navbar-menu">
       <Link to="/" onClick={()=>setMenu("home")} className = {menu=="home" ?  "active":""}>Home</Link>
+      {/* here we linked our home page to home icon on navbar , whereas we use <a href=""></a> in explore-menu & contact-us to remain on the different part of same page */}
       <a href="#explore-menu" onClick={()=>setMenu("menu")} className = {menu=="menu"?"active":""}>Menu</a>
       {/* <li onClick={()=>setMenu("mobile-app")}  className = {menu=="mobile-app"?"active":""}>Mobile-App</li> */}
       <a href="#footer"onClick={()=>setMenu("contact-us")} className = {menu=="contact-us"?"active":""}>Contact Us</a>
@@ -17,10 +22,12 @@ const Navbar = ({setShowLogin}) => {
     <div className="navbar-right">
       <img src={assets.search_icon} alt="" />
       <div className="navbar-search-icon">
-        <img src={assets.basket_icon} alt=" " />
-        <div className ="dot"></div>
+        <Link to='/cart'> <img src={assets.basket_icon} alt=" " /></Link>
+        {/* here we are link our cart page with the basket_icon */}
+        <div className ={getTotalCartAmount()===0 ?"":"dot"}></div>
       </div>
-      <button onClick={()=>setShowLogin(true)}>Sign In</button>
+      <button onClick={()=>setShowLogin(true)}>Sign In</button> 
+      {/* here we  are setting are showLogin function = true by clicking on the sign-in button  which is then passed as props to our app.jsx file , which then checks whether thisis ture or false : if it is true then  loginPopUp.jsx file is displayed */}
     </div>
     </div>
   )

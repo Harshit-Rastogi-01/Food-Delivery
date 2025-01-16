@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <div className="footer-logo">
-          <img src={assets.logo_transparent} alt="" />
+            <img src={assets.logo_transparent} alt="" />         
           </div>
             
             <p>Welcome to <b>Grab & Go </b> , your go-to solution for satisfying cravings on campus. We make it easy to enjoy your favorite canteen dishes with just a few taps, ensuring fresh and fast delivery. Because you deserve great food and convenience, every single day!</p>
