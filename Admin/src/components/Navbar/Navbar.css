@@ -1,0 +1,28 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%;
+}
+.navbar .logo{
+  width: max(15%,190px);
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0 ;
+}
+.logo:hover{
+  filter: none;
+}
+.navbar .profile{
+  width: 40px;
+}
+.profile{
+  border-radius: 40%; 
+}
+.profile:hover{
+  opacity: .85;
+  
+}
+.profile:active{
+  padding: 3px;
+}
