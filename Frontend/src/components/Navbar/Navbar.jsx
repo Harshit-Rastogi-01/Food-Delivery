@@ -1,13 +1,22 @@
-import React ,{useState , useContext}from 'react'
+import React ,{useState , useContext }from 'react'
+import {useNavigate} from 'react-router-dom'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
 import {assets} from '../../assets/assets'
-import { StoreContext } from '../../Context/StoreContext'
+import { StoreContext } from '../../context/StoreContext'
 
 const Navbar = ({setShowLogin}) => {
 
   const[menu,setMenu]=useState("home");
-  const{getTotalCartAmount} =useContext(StoreContext);
+  const{getTotalCartAmount , token ,setToken } =useContext(StoreContext);
+  const navigate = useNavigate();
+  const logout=() =>{
+    localStorage.removeItem("token") ;
+    setToken("");
+    navigate("/") ;
+
+  }
+
   return (
     <div className='navbar'>
     <Link to="/"><img src={assets.logo1} alt="" className="logo" />
@@ -26,7 +35,22 @@ const Navbar = ({setShowLogin}) => {
         {/* here we are link our cart page with the basket_icon */}
         <div className ={getTotalCartAmount()===0 ?"":"dot"}></div>
       </div>
-      <button onClick={()=>setShowLogin(true)}>Sign In</button> 
+      
+      {!token? <button onClick = {()=>setShowLogin(true)} > Sign In </button> 
+      : <div className='navbar-profile'>
+        <img src={assets.profile_icon} alt="" />
+        <ul className="navbar-profile-dropdown">
+        <li> 
+          <img src={assets.bag_icon} alt=''/>
+          <p>Orders</p>
+        </li>
+        <hr/>
+        <li> 
+          <img onClick={logout} src={assets.logout_icon} alt=''/>
+          <p>Logout</p>
+        </li> 
+        </ul>
+        </div> }
       {/* here we  are setting are showLogin function = true by clicking on the sign-in button  which is then passed as props to our app.jsx file , which then checks whether thisis ture or false : if it is true then  loginPopUp.jsx file is displayed */}
     </div>
     </div>

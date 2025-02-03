@@ -59,6 +59,41 @@
   right:-12px;
   background-color: tomato;
 }
+.navbar-profile{
+  position : relative ;
+
+}
+.navbar-profile-dropdown{
+  position :absolute ;
+  display: none;
+  right : 0 ;
+  z-index : 1 ; 
+}
+.navbar-profile:hover .navbar-profile-dropdown {
+display: flex;
+flex-direction: column;
+gap: 20px;
+background-color: #fdf0f0;
+padding: 12px 20px;
+border-radius: 4px;
+border : 1px solid  tomato;
+list-style: none;
+
+}
+.navbar-profile-dropdown li {
+  display: flex;
+  cursor: pointer;
+  gap: 10px ;
+  align-items: center;
+  /* text-align: center; */
+
+}
+.navbar-profile-dropdown img{
+  width: 25px;
+}
+.navbar-profile-dropdown li:hover{
+  color: tomato;
+}
 /* here we are adding responsiveness  */
 @media (max-width:1050px){
   .navbar .logo{
