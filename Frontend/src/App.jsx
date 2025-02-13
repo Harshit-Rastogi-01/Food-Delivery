@@ -4,6 +4,8 @@ import {BrowserRouter ,Routes,Route} from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import Order from './pages/Order/Order'
+import Verify from './pages/Verify/Verify'
+import MyOrders from './pages/MyOrders/MyOrders'
 import Footer from './components/Footer/Footer'
 import LoginPopup from './components/LoginPopup/LoginPopup'
 import {useState} from 'react'
@@ -20,6 +22,8 @@ const App = () => {
         <Route path='/' element = {<Home/>} />
         <Route path='/cart' element = {<Cart/>} />
         <Route path='/order' element = {<Order/>} />
+        <Route path='/verify' element = {<Verify />} />
+        <Route path='/myorders' element = {<MyOrders />} />
       </Routes>
     </div>
     <Footer />
