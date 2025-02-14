@@ -13,7 +13,7 @@ const Add = ({url}) => {
         name: "",
         description: "",
         price: "",
-        category: "Salad" 
+        category: "North-Indian" 
         // default category is salad here
     });
 
@@ -88,14 +88,14 @@ const Add = ({url}) => {
                     <div className='add-category flex-col'>
                         <p>Product Category</p>
                         <select name='category' onChange={onChangeHandler} >
-                            <option value="Salad">Salad</option>
-                            <option value="Rolls">Rolls</option>
-                            <option value="Deserts">Deserts</option>
-                            <option value="Sandwich">Sandwich</option>
-                            <option value="Cake">Cake</option>
-                            <option value="Pure Veg">Pure Veg</option>
+                            <option value="North-Indian">North-Indian</option>
+                            <option value="South-Indian">South-Indian</option>
                             <option value="Pasta">Pasta</option>
-                            <option value="Noodles">Noodles</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Continental">Continental</option>
+                            <option value="Sandwich">Sandwich</option>
+                            <option value="Beverages">Beverages</option>
+                            <option value="Deserts">Deserts</option>
                         </select>
                     </div>
 
