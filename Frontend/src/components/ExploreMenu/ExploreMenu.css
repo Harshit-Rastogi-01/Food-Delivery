@@ -23,6 +23,7 @@
   text-align: center;
   margin : 20px ;
   overflow-x: scroll;
+  
   /* this overflow-x : scroll which m eans we can scroll it on x axis */
 }
 .explore-menu-list::-webkit-scrollbar{
