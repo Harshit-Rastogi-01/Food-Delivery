@@ -5,14 +5,14 @@ import logo_transparent from './logo-t.png'
 import header_img from './header_img.png'
 // import headerimg1 from './headerimg1.jpg'
 import search_icon from './search_icon.png'
-import menu_1 from './menu_1.png'
-import menu_2 from './menu_2.png'
-import menu_3 from './menu_3.png'
-import menu_4 from './menu_4.png'
-import menu_5 from './menu_5.png'
-import menu_6 from './menu_6.png'
-import menu_7 from './menu_7.png'
-import menu_8 from './menu_8.png'
+import menu_1 from './menu_1.webp'
+import menu_2 from './menu_2.jpg'
+import menu_3 from './menu_3.jpg'
+import menu_4 from './menu_4.jpg'
+import menu_5 from './menu_5.jpg'
+import menu_6 from './menu_6.jpg'
+import menu_7 from './menu_7.jpg'
+import menu_8 from './menu_8.jpg'
 
 import food_1 from './food_1.png'
 import food_2 from './food_2.png'
@@ -89,35 +89,35 @@ export const assets = {
 
 export const menu_list = [
     {
-        menu_name: "Salad",
+        menu_name: "Pasta",
         menu_image: menu_1
     },
     {
-        menu_name: "Rolls",
+        menu_name: "South-Indian",
         menu_image: menu_2
     },
     {
-        menu_name: "Deserts",
+        menu_name: "North-Indian",
         menu_image: menu_3
     },
     {
-        menu_name: "Sandwich",
+        menu_name: "Chinese",
         menu_image: menu_4
     },
     {
-        menu_name: "Cake",
+        menu_name: "Continental",
         menu_image: menu_5
     },
     {
-        menu_name: "Pure Veg",
+        menu_name: "Sandwich",
         menu_image: menu_6
     },
     {
-        menu_name: "Pasta",
+        menu_name: "Beverages",
         menu_image: menu_7
     },
     {
-        menu_name: "Noodles",
+        menu_name: "Deserts",
         menu_image: menu_8
     }]
 
