@@ -1,12 +1,13 @@
 .header{
-  height: 34vw; 
+  height: 32vw; 
   /* vw is viewPort width (i.e  34vw means if viewPort width is 1000px , 34vw = 1000*0.34 )and it also changes with resizing of window  */
-  margin : 30 px ;
-  background-image: url('/header_img.png') no-repeat;
-  background-size: contain;
+  margin: 30px auto;
+  background: url('header_image.png') no-repeat;
+  background-size:contain;
   position: relative;
-
 }
+
+
 .header-contents{
   position : absolute;
   display: flex;
