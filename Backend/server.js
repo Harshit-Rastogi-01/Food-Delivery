@@ -5,11 +5,15 @@ import foodRouter from "./routes/foodRoute.js"
 import userRouter from "./routes/userRoute.js"
 import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
-import 'dotenv/config'
+import dotenv from 'dotenv/config'
 
 // app config
 const app = express()
 const port = 4000
+// dotenv.config();
+
+// console.log("Key ID:", process.env.RAZORPAY_KEY_ID);
+
 
 //middleware
 app.use(express.json())

@@ -7,7 +7,7 @@ const orderRouter = express.Router() ;
 orderRouter.post("/place", authMiddleware , placeOrder) ;
 orderRouter.post("/verify",verifyOrder) ;
 orderRouter.post("/userorder" , authMiddleware , userOrders);
-// orderRouter.post('/create', createOrder);
+
 
 
 export default orderRouter ;
