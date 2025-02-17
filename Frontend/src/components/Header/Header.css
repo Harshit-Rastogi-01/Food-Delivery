@@ -45,18 +45,34 @@
     height:38vw ;
   } */
   .header-contents{
-    max-width: 45%;
+    max-width: 52%;
   }
 }
 @media(max-width:750px){
   
   .header-contents{
+    max-width: 60%;
+  }
+  .header-contents p{
+    /* display: none; */
+    max-width: 60%;
+  }
+  .header-contents button{
+    /* padding: 2vw 4vw ; */
+    display: none;
+  }
+}
+
+@media(max-width:450px){
+  
+  .header-contents h2{
     max-width: 65%;
+    padding-bottom: 15px;
   }
   .header-contents p{
     display: none;
   }
   .header-contents button{
-    padding: 2vw 4vw
-;  }
+    display: none;
+  }
 }

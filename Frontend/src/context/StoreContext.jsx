@@ -43,9 +43,9 @@ const StoreContextProvider = (props) => {
       }
 
     const placeOrder = (deliveryData) =>{
-
         console.log(deliveryData);
     }
+    
     const fetchFoodList  = async () =>{
         const response = await axios.get(url+"/api/food/list") ;
         setFoodlist (response.data.data);
