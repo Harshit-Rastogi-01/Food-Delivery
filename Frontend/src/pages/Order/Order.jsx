@@ -53,7 +53,7 @@ const Order = () => {
         // Start Razorpay Payment Flow
         // console.log(orderResponse);
         const options = {
-          key: "rzp_test_4nJlPFmSWqS2Fe",
+          key: rzp_test_4nJlPFmSWqS2Fe,
           amount: orderResponse.amount * 100,
           currency: "INR",
           name: "Grab & Go",
