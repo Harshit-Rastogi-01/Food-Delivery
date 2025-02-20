@@ -22,18 +22,18 @@ const Navbar = ({setShowLogin}) => {
     <Link to="/"><img src={assets.logo1} alt="" className="logo" />
     </Link>
     <ul className="navbar-menu">
-      <Link to="/" onClick={()=>setMenu("home")} className = {menu=="home" ?  "active":""}>Home</Link>
+      <Link to="/" onClick={()=>setMenu("home")} className = {menu=="home" ?  "active":""}>Home </Link>
       {/* here we linked our home page to home icon on navbar , whereas we use <a href=""></a> in explore-menu & contact-us to remain on the different part of same page */}
       <a href="#explore-menu" onClick={()=>setMenu("menu")} className = {menu=="menu"?"active":""}>Menu</a>
-      {/* <li onClick={()=>setMenu("mobile-app")}  className = {menu=="mobile-app"?"active":""}>Mobile-App</li> */}
       <a href="#footer"onClick={()=>setMenu("contact-us")} className = {menu=="contact-us"?"active":""}>Contact Us</a>
     </ul>
     <div className="navbar-right">
-      <img src={assets.search_icon} alt="" />
+      {/* <img src={assets.search_icon} alt="" /> */}  
       <div className="navbar-search-icon">
         <Link to='/cart'> <img src={assets.basket_icon} alt=" " /></Link>
         {/* here we are link our cart page with the basket_icon */}
         <div className ={getTotalCartAmount()===0 ?"":"dot"}></div>
+        {/* dot functionality over basket */}
       </div>
       
       {!token? <button onClick = {()=>setShowLogin(true)} > Sign In </button> 
@@ -51,7 +51,7 @@ const Navbar = ({setShowLogin}) => {
         </li> 
         </ul>
         </div> }
-      {/* here we  are setting are showLogin function = true by clicking on the sign-in button  which is then passed as props to our app.jsx file , which then checks whether thisis ture or false : if it is true then  loginPopUp.jsx file is displayed */}
+      {/* here we  are setting are showLogin function = true by clicking on the sign-in button  which is then passed as props to our app.jsx file , which then checks whether this is ture or false : if it is true then  loginPopUp.jsx file is displayed */}
     </div>
     </div>
   )

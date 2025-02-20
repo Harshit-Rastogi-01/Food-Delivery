@@ -14,15 +14,7 @@ const Footer = () => {
             <p>Welcome to <b>Grab & Go </b> , your go-to solution for satisfying cravings on campus. We make it easy to enjoy your favorite canteen dishes with just a few taps, ensuring fresh and fast delivery. Because you deserve great food and convenience, every single day!</p>
             
         </div>
-        {/* <div className="footer-content-center">
-            <h2>COMPANY</h2>
-            <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Delivery</li>
-                <li>Privacy policy</li>
-            </ul>
-        </div> */}
+        
         <div className="footer-content-right">
             <h2>GET IN TOUCH</h2>
             <ul>
