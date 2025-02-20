@@ -130,7 +130,7 @@ npm run dev
 ```
 ## Feedback
 
-If you have any feedback, please reach out to me at harshitrastogi0206@gmail.com
+If you have any feedback, please reach out to me at  harshitrastogi0206@gmail.com
 
 
 ## References
