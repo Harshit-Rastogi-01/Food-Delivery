@@ -14,7 +14,7 @@ const Add = ({url}) => {
         description: "",
         price: "",
         category: "North-Indian" 
-        // default category is salad here
+        // default category is North-indian here
     });
 
     const onSubmitHandler = async (event) => {
