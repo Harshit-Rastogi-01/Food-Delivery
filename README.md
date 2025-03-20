@@ -65,7 +65,7 @@ This system not only enhances user experience but also enables canteen staff to 
 
 Clone the Repository to your system .
 ```bash
-git clone https://github.com/your-username/Food-Delivery.git
+git clone https://github.com/Harshit-Rastogi-01/Food-Delivery.git
 cd Food-Delivery
 ```
 ## Installation
