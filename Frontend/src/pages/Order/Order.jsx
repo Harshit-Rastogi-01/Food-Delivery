@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState , useEffect} from "react";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 import "./Order.css";
-import { StoreContext } from "../../context/StoreContext";
+import { StoreContext } from "../../Context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const Order = () => {
@@ -96,13 +96,26 @@ const Order = () => {
         const rzp1 = new window.Razorpay(options);
         rzp1.open();
       } else {
-        toast.error("Please Login first");
+        toast.error("Login First");
+        navigate('/')
       }
     } catch (error) {
       console.error("Payment Initiation Error:", error.message);
       toast.error("Something went wrong!");
     }
   };
+
+  
+  useEffect(()=>{
+    if(!token){
+      navigate('/cart');
+    }
+    else if(getTotalCartAmount() === 0){
+      toast.error("Cart Empty");
+      navigate("/cart");
+     
+    }
+  })
 
   return (
     <form onSubmit={placeOrder} className="place-order">

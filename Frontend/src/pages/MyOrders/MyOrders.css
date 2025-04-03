@@ -16,6 +16,7 @@
   padding: 10px 20px;
   color: #454545;
   border: 1px solid tomato;
+  border-radius: 5px;
 }
 .my-orders-order img{
   width: 50px;

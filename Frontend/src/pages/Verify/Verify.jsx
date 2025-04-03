@@ -12,13 +12,14 @@ const Verify = () => {
   const navigate = useNavigate();
 
   const verifyPayment = async (paymentDetails) => {
-    try {
+    // try {
       // Send payment details to backend for verification
-      const response = await axios.post(url + "/api/order/verify", {
+      const response = await axios.post(url + "/api/order/verify", {success,
         orderId,
         ...paymentDetails
-      });
-
+      }); 
+    };
+//if success
       if (response.data.success) {
         console.log("Payment Verified Successfully");
         navigate("/myorders");
@@ -26,11 +27,12 @@ const Verify = () => {
         console.error("Verification Failed:", response.data.message);
         navigate("/");
       }
-    } catch (error) {
-      console.error("Verification Error:", error);
-      navigate("/");
-    }
-  };
+    // } 
+    // catch (error) {
+    //   console.error("Verification Error:", error);
+    //   navigate("/");
+    // }
+ 
 
   const initiateRazorpay = async () => {
     try {
@@ -89,9 +91,9 @@ const Verify = () => {
         };
 
         const rzp1 = new window.Razorpay(options);
-        rzp1.on('payment.failed', function (response) {
-          console.error("Payment Failed:", response.error.description);
-          navigate("/"); // Redirect to home on payment failure
+        rzp1.on('payment.failed', function (response) { setTimeout(() => {
+          navigate("/");
+        }, 100);
         });
         rzp1.open();
       } else {
