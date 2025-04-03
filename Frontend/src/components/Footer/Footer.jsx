@@ -19,16 +19,15 @@ const Footer = () => {
             <h2>GET IN TOUCH</h2>
             <ul>
                 <li>+91-9759839770</li>
-                
                 <li>+91-8392911565</li>
-                <li>contact@grab.com</li>
+                <li>contact@grabandgo.in</li>
                 <li>harshitrastogi0206@gmail.com</li>
                 <li>maurvigupta17@gmail.com</li>
             </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2025 © Grab-and-Go.com - All Rights Reserved.</p>
+      <p className="footer-copyright">Copyright 2025 © Grab-and-Go . All Rights Reserved.</p>
     </div>
   )
 }
