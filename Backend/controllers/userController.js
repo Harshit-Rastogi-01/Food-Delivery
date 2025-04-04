@@ -1,6 +1,6 @@
 import userModel from "../models/userModel.js"
 import jwt from "jsonwebtoken" // for authentication
-import bcrypt from "bcrypt" // for password hashing in Signup , and for password comparison in Login 
+import bcrypt from "bcryptjs" // for password hashing in Signup , and for password comparison in Login 
 import validator from "validator" //Used for validating user input, such as checking if an email is valid or ensuring a password meets security criteria.
 
 // User signs up → validator checks input → bcrypt hashes password → userModel saves it in MongoDB.
