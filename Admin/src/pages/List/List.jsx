@@ -4,16 +4,19 @@ import { url, currency } from '../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const List = () => {
+const List = ({ url }) => {
 
   const [list, setList] = useState([]);
   // const url = "http://localhost:4000" 
   // we have passed the url globally in 'app.jsx' so we commented out this : if it is used in this file only then we may have used it here only 
 
   const fetchList = async () => {
-    const response = await axios.get(`${url}/api/food/list`)
+    console.log("fetching list");
+    const response = await axios.get(`${url}`+`/api/food/list`)
     // sending response to our end point
     if (response.data.success) {
+      console.log("list appearing");
+      console.log(response.data.data);
       setList(response.data.data);
     }
     else {
