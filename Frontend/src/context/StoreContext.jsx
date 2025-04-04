@@ -7,7 +7,10 @@ const StoreContextProvider = (props) => {
 
     const [cartItems,setCartItems] = useState({});
     const [ordersData,setOrdersData] = useState({});
-    const url = "http://localhost:4000" ; //backend url
+    // const url = "http://localhost:4000" ; //backend url
+
+    const url = "https://food-delivery-backend-til5.onrender.com" ; //backend url
+    //https://food-delivery-backend-til5.onrender.com // backend live url 
     const [token,setToken] = useState("") ;
     const [food_list,setFoodlist] = useState([]) ; // here we initialized our food list with an empty string 
 

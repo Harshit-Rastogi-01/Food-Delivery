@@ -5,7 +5,11 @@ import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.png'
 import AdminLogoT from './AdminLogoT.png'
 
-export const url = 'http://localhost:4000'
+// export const url = 'http://localhost:4000' //orginal backend url
+export const url = 'https://food-delivery-backend-til5.onrender.com' // updated backend url
+// https://food-delivery-backend-til5.onrender.com //backend live url 
+
+
 export const currency = '₹'
 
 export const assets ={
