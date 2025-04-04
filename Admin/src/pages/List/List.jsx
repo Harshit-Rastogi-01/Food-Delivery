@@ -4,7 +4,7 @@ import { url, currency } from '../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const List = ({url}) => {
+const List = () => {
 
   const [list, setList] = useState([]);
   // const url = "http://localhost:4000" 

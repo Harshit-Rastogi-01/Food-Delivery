@@ -10,6 +10,8 @@ export const url = 'https://food-delivery-backend-til5.onrender.com' // updated 
 // https://food-delivery-backend-til5.onrender.com //backend live url 
 
 
+
+
 export const currency = '₹'
 
 export const assets ={
