@@ -3,7 +3,7 @@ import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import { toast } from "react-toastify";
 import "./Order.css";
-import { StoreContext } from "../../Context/StoreContext";
+import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const Order = () => {
