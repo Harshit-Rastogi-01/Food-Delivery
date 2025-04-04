@@ -8,8 +8,10 @@ import orderRouter from "./routes/orderRoute.js"
 import dotenv from 'dotenv/config'
 
 // app config
+
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000 ;
+
 // dotenv.config();
 
 // console.log("Key ID:", process.env.RAZORPAY_KEY_ID);
