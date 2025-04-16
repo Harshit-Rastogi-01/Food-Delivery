@@ -46,7 +46,7 @@ const registerUser = async (req,res) =>{
     }
     //password length is explicitly set to 8 , below it will not take it 
     if(password.length<8){
-      return res.json({success:false , messgae:"Please enter a strong Password"})
+      return res.json({success:false , message:"Please enter a strong Password"})
     }
     //encrypting the password 
     const salt = await bcrypt.genSalt(10) // higher the value of salt higher will be the protection hence higher time it will take to encrypt the password , slower will be process 
